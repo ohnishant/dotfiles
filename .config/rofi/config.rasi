@@ -10,8 +10,8 @@ configuration {
 @theme "/dev/null"
 
 * {
-  bg: #1d2021;
-  bg-alt: #444;
+  bg: #1d20214f; /* #1d1021 */
+  bg-alt: #4444444f; /* #444444 */
 
   fg: #ebdbb2;
   fg-alt: #fbf1c7;
