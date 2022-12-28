@@ -27,7 +27,7 @@ return require('packer').startup(function(use)
     }
 
     use {
-        'VonHeikemen/lsp-zero.nvim',
+       'VonHeikemen/lsp-zero.nvim',
         requires = {
             -- LSP Support
             {'neovim/nvim-lspconfig'},
@@ -57,5 +57,7 @@ return require('packer').startup(function(use)
     use('norcalli/nvim-colorizer.lua')
     use('ryanoasis/vim-devicons')
     use('mbbill/undotree')
+
+    use('voldikss/vim-floaterm')
 
 end)
