@@ -12,10 +12,10 @@ return require('packer').startup(function(use)
     }
     
     use({
-        'gruvbox-community/gruvbox',
-        as = 'gruvbox',
+        'artanikin/vim-synthwave84',
+        as = 'synthwave84',
         config = function()
-            vim.cmd('colorscheme gruvbox')
+            vim.cmd('colorscheme synthwave84')
         end
     })
     use {

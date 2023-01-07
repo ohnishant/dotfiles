@@ -114,12 +114,6 @@ _G.packer_plugins = {
     path = "/home/nish/.local/share/nvim/site/pack/packer/start/friendly-snippets",
     url = "https://github.com/rafamadriz/friendly-snippets"
   },
-  gruvbox = {
-    config = { "\27LJ\2\n7\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\24colorscheme gruvbox\bcmd\bvim\0" },
-    loaded = true,
-    path = "/home/nish/.local/share/nvim/site/pack/packer/start/gruvbox",
-    url = "https://github.com/gruvbox-community/gruvbox"
-  },
   ["lsp-zero.nvim"] = {
     loaded = true,
     path = "/home/nish/.local/share/nvim/site/pack/packer/start/lsp-zero.nvim",
@@ -170,6 +164,12 @@ _G.packer_plugins = {
     path = "/home/nish/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
+  synthwave84 = {
+    config = { "\27LJ\2\n;\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\28colorscheme synthwave84\bcmd\bvim\0" },
+    loaded = true,
+    path = "/home/nish/.local/share/nvim/site/pack/packer/start/synthwave84",
+    url = "https://github.com/artanikin/vim-synthwave84"
+  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/home/nish/.local/share/nvim/site/pack/packer/start/telescope.nvim",
@@ -203,10 +203,10 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: gruvbox
-time([[Config for gruvbox]], true)
-try_loadstring("\27LJ\2\n7\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\24colorscheme gruvbox\bcmd\bvim\0", "config", "gruvbox")
-time([[Config for gruvbox]], false)
+-- Config for: synthwave84
+time([[Config for synthwave84]], true)
+try_loadstring("\27LJ\2\n;\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\28colorscheme synthwave84\bcmd\bvim\0", "config", "synthwave84")
+time([[Config for synthwave84]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

@@ -3,3 +3,5 @@
 
 # install script- WIP
 install.py
+
+./.config/nvim/plugin/
