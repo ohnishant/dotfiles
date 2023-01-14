@@ -13,6 +13,10 @@ exec --no-startup-id hsetroot -center ~/Pictures/nord-japan.png
 exec --no-startup-id xsettingsd &
 exec --no-startup-id compton -b
 
+# Trackpad settings
+exec --no-startup-id xinput set-prop 11 350 1
+exec --no-startup-id xinput set-prop 11 371 1
+
 # start a terminal
 bindsym $super+Return exec kitty 
 
@@ -30,8 +34,9 @@ bindsym $super+Shift+f exec thunar;workspace 3;focus
 bindsym XF86AudioRaiseVolume exec amixer -q set Master 5%+
 bindsym XF86AudioLowerVolume exec amixer -q set Master 5%-
 bindsym XF86AudioMute exec amixer set Master toggle
-bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
-bindsym XF86MonBrightnessUp exec brightnessctl set +5%
+# install script from 'jappeace/brightnessctl'
+bindsym XF86MonBrightnessDown exec brightness-
+bindsym XF86MonBrightnessUp exec brightnes+
 
 # music control
 bindsym XF86AudioNext exec mpc next
@@ -54,6 +59,16 @@ bindsym $super+Shift+Left move left
 bindsym $super+Shift+Down move down
 bindsym $super+Shift+Up move up
 bindsym $super+Shift+Right move right
+
+#Gaps
+# Configure 5px of space between windows and to the screen edges.
+gaps inner 10px
+gaps outer 4px
+
+# Configure an additional 5px of extra space to the screen edges,
+# for a total gap of 10px to the screen edges, and 5px between windows.
+bindsym Mod4+Mod1+KP_Add gaps outer current plus 2 ; gaps inner current plus 5
+bindsym Mod4+Mod1+KP_Subtract gaps outer current minus 2 ; gaps inner current minus 5
 
 # split in horizontal orientation
 bindsym $super+h split h
@@ -142,7 +157,8 @@ exec_always ~/.config/polybar/launch.sh &
 # ------------------------------------------------------------------
 
 # window rules, you can find the window class using xprop
-for_window [class=".*"] border pixel 2
+for_window [class=".*"] border pixel 1
+for_window [class=kitty] border pixel 0
 # assign [class=kitty] 1
 assign [class=firefox|Transmission-gtk] 7
 assign [class=Thunar|File-roller] 3
