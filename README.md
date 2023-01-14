@@ -13,6 +13,7 @@ Following are programs needed to experience some core functionalities of this se
 Programs that I like to have to customise and alter common stuff:
 - fxappearance
 - lm-sensors
+- flameshot
 
 ## Useful Links
 
