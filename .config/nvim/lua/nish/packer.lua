@@ -10,7 +10,7 @@ return require('packer').startup(function(use)
         -- or                            , branch = '0.1.x',
         requires = { {'nvim-lua/plenary.nvim'} }
     }
-    
+
     use({
         'artanikin/vim-synthwave84',
         as = 'synthwave84',
@@ -59,5 +59,6 @@ return require('packer').startup(function(use)
     use('mbbill/undotree')
 
     use('voldikss/vim-floaterm')
+    use ('iamcco/markdown-preview.nvim')
 
 end)
