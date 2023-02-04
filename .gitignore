@@ -5,4 +5,4 @@
 install.py
 
 # Compiled info from packer.nvim
-*/nvim/plugin/
+.config/nvim/packer_compiled.lua
