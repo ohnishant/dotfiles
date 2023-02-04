@@ -12,10 +12,10 @@ return require('packer').startup(function(use)
     }
 
     use({
-        'artanikin/vim-synthwave84',
-        as = 'synthwave84',
+        'Mofiqul/dracula.nvim',
+        as = 'dracula',
         config = function()
-            vim.cmd('colorscheme synthwave84')
+            vim.cmd('colorscheme dracula')
         end
     })
     use {

@@ -41,3 +41,5 @@ vim.opt.updatetime = 50
 vim.opt.termguicolors = true
 
 vim.g.mapleader = " "
+vim.opt.ttm = 10
+vim.opt.tm = 400

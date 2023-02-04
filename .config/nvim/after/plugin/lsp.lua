@@ -45,13 +45,13 @@ lsp.configure('sumneko_lua', {
 })
 
 -- Set gcc as default compiler
-lsp.configure('clangd', {
-    settings = {
-        clangd = {
-            path =  "/usr/bin/gcc" ,
-        }
-    }
-})
+-- lsp.configure('clangd', {
+--     settings = {
+--         clangd = {
+--             path =  "/usr/bin/gcc" ,
+--         }
+--     }
+-- })
 
 
 local cmp = require('cmp')

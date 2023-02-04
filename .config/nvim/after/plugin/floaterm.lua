@@ -1,3 +1,5 @@
+vim.keymap.set("t", "<Leader>ts",'<C-\\><C-n>:FloatermUpdate --wintype=split --height=14<CR>')
+vim.keymap.set("n", "<Leader>ts",':FloatermUpdate --wintype=split --height=14<CR>')
 vim.keymap.set("n", "<Leader>`", ":FloatermToggle<CR>")
 vim.keymap.set("t", "<Leader>`", "<C-\\><C-n>:FloatermToggle<CR>")
 
