@@ -14,8 +14,8 @@ exec --no-startup-id xsettingsd &
 exec --no-startup-id compton -b
 
 # Trackpad settings
-exec --no-startup-id xinput set-prop 11 350 1
-exec --no-startup-id xinput set-prop 11 371 1
+exec_always xinput set-prop 11 326 1
+exec_always xinput set-prop 11 347 1
 
 # start a terminal
 bindsym $super+Return exec kitty 
@@ -25,7 +25,7 @@ bindsym $super+Shift+d exec i3-dmenu-desktop --dmenu="dmenu -i -fn 'Noto Sans:si
 bindsym $super+d exec rofi -lines 12 -padding 18 -width 60 -location 0 -show drun -sidebar-mode -columns 3 -font 'JetBrainsMono Nerd Font 10'
 
 #screenshotter
-bindsym $super+Shift+s exec flameshot gui &
+bindsym $super+Shift+s exec flameshot gui --clipboard &
 # bindsym $super+l exec i3lock -i ~/.wallpaper.png
 bindsym $super+Shift+w exec firefox;workspace 7;focus
 bindsym $super+Shift+f exec thunar;workspace 3;focus
@@ -64,6 +64,7 @@ bindsym $super+Shift+Right move right
 # Configure 5px of space between windows and to the screen edges.
 gaps inner 10px
 gaps outer 4px
+
 
 # Configure an additional 5px of extra space to the screen edges,
 # for a total gap of 10px to the screen edges, and 5px between windows.
@@ -158,7 +159,7 @@ exec_always ~/.config/polybar/launch.sh &
 
 # window rules, you can find the window class using xprop
 for_window [class=".*"] border pixel 1
-for_window [class=kitty] border pixel 0
+for_window [class=kitty|Code] border pixel 0
 # assign [class=kitty] 1
 assign [class=firefox|Transmission-gtk] 7
 assign [class=Thunar|File-roller] 3
@@ -178,5 +179,4 @@ client.placeholder          #2f343f #2f343f #d8dee8 #2f343f #2f343f
 client.background           #2f343f
 
 
-exec_always alttab -fg "#d58681" -bg "#4a4a4a" -frame "#eb564d" -t 128x150 -i 127x64
 exec_always nitrogen --restore
