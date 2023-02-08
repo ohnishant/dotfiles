@@ -15,7 +15,7 @@ exec --no-startup-id compton -b
 
 # Trackpad settings
 exec_always xinput set-prop "ELAN0518:01 04F3:31FC Touchpad" "libinput Tapping Enabled" 1
-exec_always xinput set-prop "ELAN0518:01 04F3:31FC Touchpad" "libinput Tapping Enabled" 1xec_always xinput set-prop 11 326 1
+exec_always xinput set-prop "ELAN0518:01 04F3:31FC Touchpad" "libinput Natural Scrolling Enabled" 1
 
 # start a terminal
 bindsym $super+Return exec kitty 
