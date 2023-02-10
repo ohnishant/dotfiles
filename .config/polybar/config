@@ -26,7 +26,8 @@ bottom = true
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-click-left = $HOME/.polybarscripts/rofi-wifi-menu/rofi-wifi-menu.sh &
+# use nm-applet instead
+# click-left = $HOME/.polybarscripts/rofi-wifi-menu/rofi-wifi-menu.sh &
 
 line-size = 3
 line-color = #f00
@@ -41,7 +42,7 @@ module-margin-left = 1
 module-margin-right = 2
 
 ; font-0 = fixed:pixelsize=10;1
-font-0 = JetBrainsMono Nerd Font:size=10;2 
+font-0 = MesloLGS NF:size=10;2 
 font-1 = DejaVu Sans Mono wifi ramp:size=10 
 font-2 = Font Awesome 6 Free:bold:pixelsize=10;2
 font-3 = Font Awesome:style=Regular
