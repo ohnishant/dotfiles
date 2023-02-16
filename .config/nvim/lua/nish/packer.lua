@@ -48,6 +48,10 @@ return require('packer').startup(function(use)
         }
     }
 
+    -- Git Integrations
+    use('tpope/vim-fugitive')
+    use('lewis6991/gitsigns.nvim')
+
     use('preservim/nerdtree')
 
     use('vim-airline/vim-airline')
