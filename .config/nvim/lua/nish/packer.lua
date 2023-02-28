@@ -54,8 +54,10 @@ return require('packer').startup(function(use)
 
     use('preservim/nerdtree')
 
-    use('vim-airline/vim-airline')
-    use('vim-airline/vim-airline-themes')
+    use {
+        'nvim-lualine/lualine.nvim',
+        requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+    }
 
     use('jiangmiao/auto-pairs')
     use('norcalli/nvim-colorizer.lua')
