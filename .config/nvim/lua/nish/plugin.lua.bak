@@ -76,6 +76,7 @@ local plugins = {
     'iamcco/markdown-preview.nvim',
 
     'tpope/vim-commentary',
+    'github/copilot.vim'
 
 }
 
