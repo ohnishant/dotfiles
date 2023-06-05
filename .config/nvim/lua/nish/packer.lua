@@ -69,7 +69,6 @@ return require('packer').startup(function(use)
 
     use('tpope/vim-commentary')
 
-    use('karb94/neoscroll.nvim')
     use {
         "zbirenbaum/copilot.lua",
         cmd = "Copilot",
