@@ -11,7 +11,7 @@ floating_modifier $super
 #autostart
 exec --no-startup-id hsetroot -center ~/Pictures/nord-japan.png
 exec --no-startup-id xsettingsd &
-exec --no-startup-id compton -b
+exec --no-startup-id picom -b
 
 # Trackpad settings
 exec_always xinput set-prop "ELAN0518:01 04F3:31FC Touchpad" "libinput Tapping Enabled" 1
@@ -22,7 +22,7 @@ bindsym $super+Return exec kitty
 
 # start dmenu (a program launcher)
 bindsym $super+Shift+d exec i3-dmenu-desktop --dmenu="dmenu -i -fn 'Noto Sans:size=11'"
-bindsym $super+d exec rofi -lines 12 -padding 18 -width 60 -location 0 -show drun -sidebar-mode -columns 3 -font 'JetBrainsMono Nerd Font 10'
+bindsym $super+space exec rofi -lines 12 -padding 18 -width 60 -location 0 -show drun -sidebar-mode -columns 3 -font 'JetBrainsMono Nerd Font 10'
 
 #screenshotter
 bindsym $super+Shift+s exec flameshot gui --clipboard &
@@ -62,8 +62,8 @@ bindsym $super+Shift+Right move right
 
 #Gaps
 # Configure 5px of space between windows and to the screen edges.
-gaps inner 10px
-gaps outer 4px
+# gaps inner 10px
+# gaps outer 4px
 
 
 # Configure an additional 5px of extra space to the screen edges,
@@ -84,7 +84,7 @@ bindsym $super+f fullscreen toggle
 bindsym $super+s layout toggle split
 
 # toggle tiling / floating
-bindsym $super+space floating toggle
+bindsym $super+d floating toggle
 
 # change focus between tiling / floating windows
 bindsym $super+Shift+space focus mode_toggle
