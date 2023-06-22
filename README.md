@@ -12,6 +12,7 @@ Following are programs needed to experience some core functionalities of this se
 
 Programs that I like to have to customise and alter common stuff:
 - fxappearance
+- qt5ct
 - lm-sensors
 - flameshot
 
