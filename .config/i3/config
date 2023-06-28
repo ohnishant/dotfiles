@@ -49,21 +49,21 @@ bindsym $super+c kill
 bindsym $alt+F4 kill
 
 # change focus
-bindsym $super+Left focus left
-bindsym $super+Down focus down
-bindsym $super+Up focus up
-bindsym $super+Right focus right
+# bindsym $super+Down focus down
+# bindsym $super+Left focus left
+# bindsym $super+Up focus up
+# bindsym $super+Right focus right
 
 # move focused window
-bindsym $super+Shift+Left move left
-bindsym $super+Shift+Down move down
-bindsym $super+Shift+Up move up
-bindsym $super+Shift+Right move right
+# bindsym $super+Shift+Left move left
+# bindsym $super+Shift+Down move down
+# bindsym $super+Shift+Up move up
+# bindsym $super+Shift+Right move right
 
 #Gaps
 # Configure 5px of space between windows and to the screen edges.
-# gaps inner 10px
-# gaps outer 4px
+gaps outer 4px
+gaps inner 10px
 
 
 # Configure an additional 5px of extra space to the screen edges,
@@ -72,10 +72,10 @@ bindsym Mod4+Mod1+KP_Add gaps outer current plus 2 ; gaps inner current plus 5
 bindsym Mod4+Mod1+KP_Subtract gaps outer current minus 2 ; gaps inner current minus 5
 
 # split in horizontal orientation
-bindsym $super+h split h
+# bindsym $super+h split h
 
 # split in vertical orientation
-bindsym $super+v split v
+# bindsym $super+v split v
 
 # enter fullscreen mode for the focused container
 bindsym $super+f fullscreen toggle
@@ -161,12 +161,13 @@ exec_always ~/.config/polybar/launch.sh &
 for_window [class=".*"] border pixel 1
 for_window [class=kitty|Code] border pixel 0
 # assign [class=kitty] 1
+assign [class=code|Code] 3
+assign [class=Thunar|File-roller|Audacity|Vlc|mpv|Ghb|Xfburn|Gimp*|Inkscape] 5
 assign [class=firefox|Transmission-gtk] 7
-assign [class=Thunar|File-roller] 3
-assign [class=Geany|Evince|Gucharmap|Soffice|libreoffice*] 4
-assign [class=Audacity|Vlc|mpv|Ghb|Xfburn|Gimp*|Inkscape] 5
+assign [class=discord] 9
+assign [class=spotify|Spotify] 10
 assign [class=Lxappearance|System-config-printer.py|Lxtask|GParted|Pavucontrol|Exo-helper*|Lxrandr|Arandr] 6
-for_window [class=Viewnior|feh|Audacious|File-roller|Lxappearance|Lxtask|Pavucontrol] floating enable
+for_window [class=Viewnior|feh|thunar|Audacious|File-roller|Lxappearance|Lxtask|Pavucontrol] floating enable
 for_window [class=URxvt|Firefox|Geany|Evince|Soffice|libreoffice*|mpv|Ghb|Xfburn|Gimp*|Inkscape|Vlc|Lxappearance|Audacity] focus
 for_window [class=Xfburn|GParted|System-config-printer.py|Lxtask|Pavucontrol|Exo-helper*|Lxrandr|Arandr] focus
 
