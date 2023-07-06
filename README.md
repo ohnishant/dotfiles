@@ -15,6 +15,7 @@ Programs that I like to have to customise and alter common stuff:
 - qt5ct
 - lm-sensors
 - flameshot
+- copyq
 
 ## Useful Links
 

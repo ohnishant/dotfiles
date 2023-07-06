@@ -12,6 +12,7 @@ floating_modifier $super
 exec --no-startup-id hsetroot -center ~/Pictures/nord-japan.png
 exec --no-startup-id xsettingsd &
 exec --no-startup-id picom -b
+exec --no-startup-id copyq 
 
 # Trackpad settings
 exec_always xinput set-prop "ELAN0518:01 04F3:31FC Touchpad" "libinput Tapping Enabled" 1
@@ -23,6 +24,9 @@ bindsym $super+Return exec kitty
 # start dmenu (a program launcher)
 bindsym $super+Shift+d exec i3-dmenu-desktop --dmenu="dmenu -i -fn 'Noto Sans:size=11'"
 bindsym $super+space exec rofi -lines 12 -padding 18 -width 60 -location 0 -show drun -sidebar-mode -columns 3 -font 'JetBrainsMono Nerd Font 10'
+
+# clipboard manager toggle
+bindsym Control+$super+v exec copyq toggle
 
 #screenshotter
 bindsym $super+Shift+s exec flameshot gui --clipboard &
@@ -167,7 +171,7 @@ assign [class=firefox|Transmission-gtk] 7
 assign [class=discord] 9
 assign [class=spotify|Spotify] 10
 assign [class=Lxappearance|System-config-printer.py|Lxtask|GParted|Pavucontrol|Exo-helper*|Lxrandr|Arandr] 6
-for_window [class=Viewnior|feh|thunar|Audacious|File-roller|Lxappearance|Lxtask|Pavucontrol] floating enable
+for_window [class=Viewnior|feh|thunar|Audacious|File-roller|Lxappearance|Lxtask|copyq|Pavucontrol] floating enable
 for_window [class=URxvt|Firefox|Geany|Evince|Soffice|libreoffice*|mpv|Ghb|Xfburn|Gimp*|Inkscape|Vlc|Lxappearance|Audacity] focus
 for_window [class=Xfburn|GParted|System-config-printer.py|Lxtask|Pavucontrol|Exo-helper*|Lxrandr|Arandr] focus
 
