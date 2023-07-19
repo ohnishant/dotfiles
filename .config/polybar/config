@@ -4,14 +4,15 @@ include-file = ~/.config/polybar/colors.ini
 
 [colors]
 ;background = ${xrdb:color0:#222}
-background = #df1d2021 ; #1d2021 
-background-alt = #444
+background = #FD1B1E28 
+; #1b1e28
+background-alt = #000
 ;foreground = ${xrdb:color7:#222}
-foreground = #ebdbb2
-foreground-alt = #fbf1c7
-primary = #ffb52a
-secondary = #e60053
-alert = #bd2c40
+foreground = #dfe1ec
+foreground-alt = #bfc3d9
+primary = #5de4c7
+secondary = #fcc5ed
+alert = #b03675
 
 [bar/status-bar]
 ;monitor = ${env:MONITOR:HDMI-1}
@@ -30,7 +31,7 @@ foreground = ${colors.foreground}
 # click-left = $HOME/.polybarscripts/rofi-wifi-menu/rofi-wifi-menu.sh &
 
 line-size = 3
-line-color = #f00
+line-color = #b03675
 
 border-size = 4
 border-color = #00000000
@@ -43,6 +44,7 @@ module-margin-right = 2
 
 ; font-0 = fixed:pixelsize=10;1
 font-0 = MesloLGS NF:size=10;2 
+; font-0 = Jetbrains Mono NFM:size=10;2 
 font-1 = DejaVu Sans Mono wifi ramp:size=10 
 font-2 = Font Awesome 6 Free:bold:pixelsize=10;2
 font-3 = Font Awesome:style=Regular
@@ -50,11 +52,11 @@ font-4 = Wuncon Siji:pixelsize=10;1
 font-5 = Font Awesome 6 Brands:style=Regular
 
 modules-left = i3 
-modules-center = mpd
+modules-center = xxxwindow mpd
 modules-right = pulseaudio memory cpu wlan battery temperature date powermenu
 
 tray-position = right
-tray-padding = 2
+tray-padding = 0
 ;tray-background = #0063ff
 
 ;wm-restack = bspwm
@@ -74,6 +76,11 @@ cursor-scroll = ns-resize
 [module/xwindow]
 type = internal/xwindow
 label = %title:0:30:...%
+
+[module/xxxwindow]
+type = custom/script
+interval = 0
+exec = ~/.config/polybar/xxxwindow.sh
 
 [module/xkeyboard]
 type = internal/xkeyboard
@@ -130,7 +137,7 @@ index-sort = true
 wrapping-scroll = false
 
 ; Only show workspaces on the same output as the bar
-;pin-workspaces = true
+; pin-workspaces = true
 
 label-mode-padding = 2
 label-mode-foreground = #000
@@ -433,7 +440,7 @@ format-warn-underline = ${self.format-underline}
 
 label = %temperature-c%
 label-warn = %temperature-c%
-label-warn-foreground = ${colors.secondary}
+label-warn-foreground = ${colors.alert}
 
 hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon4/temp1_input
 

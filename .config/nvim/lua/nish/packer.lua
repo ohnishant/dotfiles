@@ -10,13 +10,25 @@ return require('packer').startup(function(use)
         requires = { { 'nvim-lua/plenary.nvim' } }
     }
 
-    use({
-        'Mofiqul/dracula.nvim',
-        as = 'dracula',
+    -- use({
+    --     'Mofiqul/dracula.nvim',
+    --     as = 'dracula',
+    --     config = function()
+    --         vim.cmd('colorscheme dracula')
+    --     end
+    -- })
+
+    use {
+        'olivercederborg/poimandres.nvim',
         config = function()
-            vim.cmd('colorscheme dracula')
+            require('poimandres').setup {
+                -- leave this setup function empty for default config
+                -- or refer to the configuration section
+                -- for configuration options
+            }
         end
-    })
+    }
+
     use {
         'nvim-treesitter/nvim-treesitter',
         run = function()
@@ -52,7 +64,7 @@ return require('packer').startup(function(use)
     use('tpope/vim-fugitive')
     use('lewis6991/gitsigns.nvim')
 
-    use('preservim/nerdtree')
+    -- use('preservim/nerdtree')
 
     use {
         'nvim-lualine/lualine.nvim',
@@ -70,6 +82,4 @@ return require('packer').startup(function(use)
     use('tpope/vim-commentary')
 
     use('github/copilot.vim')
-
 end)
-

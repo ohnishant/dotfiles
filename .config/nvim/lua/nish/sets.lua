@@ -34,7 +34,7 @@ vim.opt.cmdheight = 2
 vim.opt.signcolumn = "yes"
 vim.opt.cursorline = true
 
-vim.g.colorscheme = 'dracula'
+vim.g.colorscheme = 'poimandres'
 
 vim.opt.updatetime = 50
 
