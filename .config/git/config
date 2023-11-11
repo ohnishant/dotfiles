@@ -1,0 +1,11 @@
+[user]
+	email = nishant.mishra550@gmail.com
+	name = OhNishant
+[init]
+	defaultBranch = main
+[core]
+	editor = nvim
+[alias]    
+	# Thanks r00k, this creates a pretty graph view of the log (stolen from teej)
+  	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+
