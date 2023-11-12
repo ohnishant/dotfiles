@@ -1,7 +1,6 @@
 vim.opt.number = true
 vim.opt.relativenumber = true
 
-
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
@@ -34,12 +33,9 @@ vim.opt.cmdheight = 2
 vim.opt.signcolumn = "yes"
 vim.opt.cursorline = true
 
-vim.g.colorscheme = 'poimandres'
-
 vim.opt.updatetime = 50
 
 vim.opt.termguicolors = true
 
-vim.g.mapleader = " "
 vim.opt.ttm = 10
 vim.opt.tm = 400

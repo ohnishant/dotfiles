@@ -1,10 +1,9 @@
 vim.g.mapleader = " "
 
--- Open and close files
 vim.keymap.set("n", "<leader>ee", vim.cmd.Ex)
 vim.keymap.set("n", "<leader>qq", vim.cmd.bd)
 
--- Saving files
+-- Saving files: These exist just in case I come back from using VSCode for a little longer than its required lol
 vim.keymap.set("n", "<C-s>", "<Esc>:w<CR>")
 vim.keymap.set("i", "<C-s>", "<Esc>:w<CR>")
 
@@ -26,4 +25,5 @@ vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 
 
 -- Change all occurrences remap
-vim.keymap.set("n", "<leader>ciw", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+--not needed now with lsp smart rename
+--vim.keymap.set("n", "<leader>ciw", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
