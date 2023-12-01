@@ -17,7 +17,6 @@ return {
 			markdown = { "markdownlint" },
 			lua = { "luacheck" },
 			python = { "ruff" },
-			rust = { "cargo" },
 			cpp = { "clangtidy" },
 			c = { "clangtidy" },
 			go = { "golangcilint" },
@@ -32,7 +31,7 @@ return {
 			end,
 		})
 
-		-- Make Linted Keymap
+		-- Make Linted
 		vim.keymap.set("n", "<leader>ml", function()
 			lint.try_lint()
 		end, { desc = "Trigger linting for current file" })
