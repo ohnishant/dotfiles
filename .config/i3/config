@@ -40,7 +40,7 @@ bindsym XF86AudioLowerVolume exec amixer -q set Master 5%-
 bindsym XF86AudioMute exec amixer set Master toggle
 # install script from 'jappeace/brightnessctl'
 bindsym XF86MonBrightnessDown exec brightness-
-bindsym XF86MonBrightnessUp exec brightnes+
+bindsym XF86MonBrightnessUp exec brightness+
 
 # music control
 bindsym XF86AudioNext exec mpc next
