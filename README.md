@@ -23,17 +23,17 @@ Programs that I like to have to customise and alter common stuff:
 
 ## Visudo Lines for brightness buttons
 
-# Allow brightness commands to run without sudo
+## Allow brightness commands to run without sudo
 
 I keep forgetting how to do this so here
 
-````
+```
 ALL ALL=NOPASSWD: /usr/local/bin/brightness
 ALL ALL=NOPASSWD: /usr/local/bin/brightness-
 ALL ALL=NOPASSWD: /usr/local/bin/brightness+
 ```
+
 ## Useful Links
 
 - [Xorg Keynames](http://xahlee.info/linux/linux_show_keycode_keysym.html) _Useful for i3 keybinding_
 - [CSV Editor](https://www.moderncsv.com/) _CSV Editor_
-````
