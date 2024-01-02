@@ -22,7 +22,7 @@ return {
 				rust = { "rustfmt" },
 				cpp = { "clang-format" },
 				c = { "clang-format" },
-				go = { "gofmt" },
+				go = { "gofumpt" },
 			},
 			format_on_save = {
 				lsp_fallback = true,

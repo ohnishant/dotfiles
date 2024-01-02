@@ -15,11 +15,11 @@ return {
 			html = { "stylelint" },
 			json = { "jsonlint" },
 			markdown = { "markdownlint" },
-			lua = { "luacheck" },
+			-- lua = { "luacheck" },
 			python = { "ruff" },
-			cpp = { "clangtidy" },
-			c = { "clangtidy" },
-			go = { "golangcilint" },
+			cpp = { "cpplint" },
+			-- c = { "clangtidy" },
+			-- go = { "golangcilint" },
 		}
 
 		local lint_augroup = vim.api.nvim_create_augroup("lint", { clear = true })

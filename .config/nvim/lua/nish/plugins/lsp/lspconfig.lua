@@ -73,6 +73,16 @@ return {
 			on_attach = on_attach,
 		})
 
+		lspconfig["pylsp"].setup({
+			capabilities = capabilities,
+			on_attach = on_attach,
+		})
+
+		lspconfig["ruff_lsp"].setup({
+			capabilities = capabilities,
+			on_attach = on_attach,
+		})
+
 		lspconfig["cssls"].setup({
 			capabilities = capabilities,
 			on_attach = on_attach,
@@ -90,6 +100,11 @@ return {
 		})
 
 		lspconfig["rust_analyzer"].setup({
+			capabilities = capabilities,
+			on_attach = on_attach,
+		})
+
+		lspconfig["gopls"].setup({
 			capabilities = capabilities,
 			on_attach = on_attach,
 		})
