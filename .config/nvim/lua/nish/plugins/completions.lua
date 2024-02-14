@@ -16,6 +16,12 @@ return {
 		local cmp = require("cmp")
 		local luasnip = require("luasnip")
 
+		local has_words_before = function()
+			unpack = unpack or table.unpack
+			local line, col = unpack(vim.api.nvim_win_get_cursor(0))
+			return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
+		end
+
 		-- load vscode style snippets (for friendly snippets)
 		require("luasnip.loaders.from_vscode").lazy_load()
 
@@ -37,7 +43,31 @@ return {
 				["<C-Space>"] = cmp.mapping.complete(),
 				["<C-e>"] = cmp.mapping.abort(), -- Close the thingy
 				["<CR>"] = cmp.mapping.confirm({ select = false }),
-			}),
+
+				-- jump to next snippet position
+				["<Tab>"] = cmp.mapping(function(fallback)
+					if cmp.visible() then
+						cmp.select_next_item()
+					elseif luasnip.expand_or_jumpable() then
+						luasnip.expand_or_jump()
+					elseif has_words_before() then
+						cmp.complete()
+					else
+						fallback()
+					end
+				end), -- end of tab mapping
+
+				-- jump to pervious snippet
+				["<S-Tab>"] = cmp.mapping(function(fallback)
+					if cmp.visible() then
+						cmp.select_prev_item()
+					elseif luasnip.jumpable(-1) then
+						luasnip.jump(-1)
+					else
+						fallback()
+					end
+				end), -- end of Shift tab mapping
+			}), -- end of insert mapping
 
 			sources = cmp.config.sources({
 				-- order = priority here
@@ -47,5 +77,46 @@ return {
 				{ name = "path" }, -- Filesystem paths
 			}),
 		})
+
+		-- cmdline completions for regex
+		cmp.setup.cmdline("/", {
+			mapping = cmp.mapping.preset.cmdline(),
+			sources = {
+				{ name = "buffer" },
+			},
+		})
+
+		-- cmdline completions for command
+		cmp.setup.cmdline(":", {
+			mappgin = cmp.mapping.preset.cmdline(),
+			sources = cmp.config.sources({
+				{ name = "path" },
+			}, {
+				{
+					name = "cmdline",
+					option = {
+						ignore_cmds = { "Man", "!" },
+					},
+				},
+			}),
+		})
+
+		vim.keymap.set({ "i" }, "<C-s>;", function()
+			luasnip.expand()
+		end, { silent = true })
+
+		vim.keymap.set({ "i", "s" }, "<C-L>", function()
+			luasnip.jump(1)
+		end, { silent = true })
+
+		vim.keymap.set({ "i", "s" }, "<C-J>", function()
+			luasnip.jump(-1)
+		end, { silent = true })
+
+		vim.keymap.set({ "i", "s" }, "<C-E>", function()
+			if luasnip.choice_active() then
+				luasnip.change_choice(1)
+			end
+		end, { silent = true })
 	end,
 }
