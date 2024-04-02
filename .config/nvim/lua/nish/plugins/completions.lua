@@ -5,6 +5,7 @@ return {
 	dependencies = {
 		-- Completion
 		"hrsh7th/cmp-buffer",
+		"hrsh7th/cmp-cmdline",
 		"hrsh7th/cmp-path",
 		"saadparwaiz1/cmp_luasnip",
 		-- Snippets
@@ -45,7 +46,7 @@ return {
 				["<CR>"] = cmp.mapping.confirm({ select = false }),
 
 				-- jump to next snippet position
-				["<Tab>"] = cmp.mapping(function(fallback)
+				["<C-l>"] = cmp.mapping(function(fallback)
 					if cmp.visible() then
 						cmp.select_next_item()
 					elseif luasnip.expand_or_jumpable() then
@@ -58,7 +59,7 @@ return {
 				end), -- end of tab mapping
 
 				-- jump to pervious snippet
-				["<S-Tab>"] = cmp.mapping(function(fallback)
+				["<C-h>"] = cmp.mapping(function(fallback)
 					if cmp.visible() then
 						cmp.select_prev_item()
 					elseif luasnip.jumpable(-1) then

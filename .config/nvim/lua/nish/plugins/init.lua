@@ -4,7 +4,22 @@ return {
 
 	"mbbill/undotree",
 	"nvim-tree/nvim-web-devicons",
+	"tpope/vim-sleuth",
 	"tpope/vim-surround", -- Use bind: `cs(original)(new)` to replace the surrounding symbols | cst(new) for tag
 	"tpope/vim-fugitive",
-	"tpope/vim-commentary",
+	{
+		"lukas-reineke/indent-blankline.nvim",
+		main = "ibl",
+		opts = {},
+		config = function()
+			local ibl = require("ibl")
+			ibl.setup({
+				enabled = false,
+				scope = { enabled = true },
+			})
+		end,
+	},
+	{
+		"tpope/vim-commentary",
+	},
 }

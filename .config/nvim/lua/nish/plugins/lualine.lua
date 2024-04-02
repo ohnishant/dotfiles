@@ -30,8 +30,21 @@ return {
 			sections = {
 				lualine_a = { "mode" },
 				lualine_b = { "branch", "diff", "diagnostics" },
-				lualine_c = { "filename" },
-				lualine_x = { "nvim-lsp", "encoding", "fileformat", "filetype" },
+				lualine_c = {},
+				lualine_x = {
+					{
+						"filename",
+						file_status = true,
+						path = 1,
+						newfile_status = true,
+						shorting_target = 40,
+						symbols = { modified = "", readonly = "", unnamed = "[No Name]", newfile = "" },
+					},
+					"nvim-lsp",
+					"encoding",
+					"fileformat",
+					"filetype",
+				},
 				lualine_y = { "progress" },
 				lualine_z = { "location" },
 			},

@@ -4,6 +4,8 @@ return {
 	dependencies = {
 		"hrsh7th/cmp-nvim-lsp",
 		{ "antosha417/nvim-lsp-file-operations", config = true },
+		-- autocompletion for files such as package.json, tsconfig.json, etc
+		"b0o/schemastore.nvim",
 	},
 
 	config = function()
@@ -93,6 +95,11 @@ return {
 			on_attach = on_attach,
 		})
 
+		lspconfig["clangd"].setup({
+			capabilities = capabilities,
+			on_attach = on_attach,
+		})
+
 		lspconfig["emmet_ls"].setup({
 			capabilities = capabilities,
 			on_attach = on_attach,
@@ -107,6 +114,12 @@ return {
 		lspconfig["gopls"].setup({
 			capabilities = capabilities,
 			on_attach = on_attach,
+		})
+
+		lspconfig["templ"].setup({
+			capabilities = capabilities,
+			on_attach = on_attach,
+			filetypes = { "templ" },
 		})
 
 		lspconfig["lua_ls"].setup({
@@ -124,6 +137,16 @@ return {
 							[vim.fn.stdpath("config") .. "/lua"] = true,
 						},
 					},
+				},
+			},
+		})
+
+		lspconfig["jsonls"].setup({
+			capabilities = capabilities,
+			settings = {
+				json = {
+					schemas = require("schemastore").json.schemas,
+					validate = { enable = true },
 				},
 			},
 		})
