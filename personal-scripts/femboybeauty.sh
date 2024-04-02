@@ -3,7 +3,8 @@
 
 # file=$1
 
-thunar $HOME/Pictures/screenshots/ &
+xdg-open $HOME/Pictures/screenshots/ &
+THUNAR_PID=$!
 
 echo "Enter file path: "
 read file
@@ -14,3 +15,6 @@ filepath=$filepath_prefix$file
 echo $filepath
 
 curl "https://femboy.beauty/api/upload" -F $filepath | jq .
+
+echo "killing thunar with PID" $THUNAR_PID
+pkill -9 nautilus
