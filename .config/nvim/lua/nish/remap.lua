@@ -1,6 +1,6 @@
 vim.g.mapleader = " "
 
-vim.keymap.set("n", "<leader>ee", vim.cmd.Ex)
+vim.keymap.set("n", "<leader>ee", vim.cmd.Oil)
 vim.keymap.set("n", "<leader>qq", vim.cmd.bd)
 
 -- Saving files: These exist just in case I come back from using VSCode for a little longer than its required lol

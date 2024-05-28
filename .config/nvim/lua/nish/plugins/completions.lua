@@ -26,6 +26,9 @@ return {
 		-- load vscode style snippets (for friendly snippets)
 		require("luasnip.loaders.from_vscode").lazy_load()
 
+		cmp.config.formatting = {
+			format = require("tailwindcss-colorizer-cmp").formatter,
+		}
 		cmp.setup({
 			completion = {
 				completeopt = "menu,menuone,preview,noselect",

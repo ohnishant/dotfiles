@@ -6,3 +6,5 @@ install.py
 
 # Compiled info from packer.nvim
 .config/nvim/plugin/packer_compiled.lua
+
+Fonts/*.zip

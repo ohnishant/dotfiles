@@ -105,6 +105,10 @@ return {
 			on_attach = on_attach,
 			filetypes = { "html", "typescriptreact", "javascriptreact", "css" },
 		})
+		lspconfig["tailwindcss"].setup({
+			capabilities = capabilities,
+			on_attach = on_attach,
+		})
 
 		lspconfig["rust_analyzer"].setup({
 			capabilities = capabilities,
