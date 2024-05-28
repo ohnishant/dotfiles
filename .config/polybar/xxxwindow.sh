@@ -26,6 +26,10 @@ elif [ $WM_DESKTOP != "1883" ]; then
 	elif [ $WM_CLASS == 'discord' ]; then
 
 		echo "%{F#ffffff}Discord%{u-}"
+
+	elif [ $WM_CLASS == 'RayLib' ]; then
+
+		echo "%{F#ffffff}$WM_NAME%{u-}"
 	
 	# elif [ $WM_NAME == 'Enter WM_NAME value here' ]; then
 

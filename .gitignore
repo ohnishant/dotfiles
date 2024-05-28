@@ -8,3 +8,5 @@ install.py
 .config/nvim/plugin/packer_compiled.lua
 
 Fonts/*.zip
+
+.config/git/gitk
