@@ -8,5 +8,3 @@ echo "Installing latest version of discord..."
 sudo dpkg -i /tmp/discord.deb
 
 echo "Update complete!"
-echo "Starting discord..."
-discord &
