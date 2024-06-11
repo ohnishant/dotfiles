@@ -9,6 +9,7 @@ return {
 	},
 
 	config = function()
+		require('java').setup()
 		local lspconfig = require("lspconfig")
 		local cmp_nvim_lsp = require("cmp_nvim_lsp")
 
@@ -74,6 +75,8 @@ return {
 			capabilities = capabilities,
 			on_attach = on_attach,
 		})
+
+		require('lspconfig').jdtls.setup({})
 
 		lspconfig["pylsp"].setup({
 			capabilities = capabilities,
