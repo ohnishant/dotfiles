@@ -25,3 +25,7 @@ vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 -- Change all occurrences remap
 --not needed now with lsp smart rename
 --vim.keymap.set("n", "<leader>ciw", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+
+-- Quick Fix List Navigation
+vim.keymap.set("n", "<leader>cn", ":cnext<CR>")
+vim.keymap.set("n", "<leader>cp", ":cprev<CR>")

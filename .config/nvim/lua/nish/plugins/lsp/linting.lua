@@ -7,17 +7,13 @@ return {
 	config = function()
 		local lint = require("lint")
 		lint.linters_by_ft = {
-			javascript = { "eslint_d" },
-			typescript = { "eslint_d" },
-			javascriptreact = { "eslint_d" },
-			typescriptreact = { "eslint_d" },
-			css = { "stylelint" },
-			html = { "stylelint" },
-			json = { "jsonlint" },
-			markdown = { "markdownlint" },
+			-- javascript = { "eslint_d" },
+			-- typescript = { "eslint_d" },
+			-- javascriptreact = { "eslint_d" },
+			-- typescriptreact = { "eslint_d" },
+			-- markdown = { "markdownlint" },
 			-- lua = { "luacheck" },
 			python = { "ruff" },
-			cpp = { "cpplint" },
 			-- c = { "clangtidy" },
 			-- go = { "golangcilint" },
 		}

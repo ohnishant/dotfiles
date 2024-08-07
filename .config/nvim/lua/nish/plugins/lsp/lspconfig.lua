@@ -9,7 +9,6 @@ return {
 	},
 
 	config = function()
-		require('java').setup()
 		local lspconfig = require("lspconfig")
 		local cmp_nvim_lsp = require("cmp_nvim_lsp")
 
@@ -75,8 +74,12 @@ return {
 			capabilities = capabilities,
 			on_attach = on_attach,
 		})
+		lspconfig["eslint"].setup({
+			capabilities = capabilities,
+			on_attach = on_attach,
+		})
 
-		require('lspconfig').jdtls.setup({})
+		require("lspconfig").jdtls.setup({})
 
 		lspconfig["pylsp"].setup({
 			capabilities = capabilities,
@@ -101,6 +104,7 @@ return {
 		lspconfig["clangd"].setup({
 			capabilities = capabilities,
 			on_attach = on_attach,
+			cmd = { "clangd", "--fallback-style=webkit" },
 		})
 
 		lspconfig["emmet_ls"].setup({
@@ -121,12 +125,6 @@ return {
 		lspconfig["gopls"].setup({
 			capabilities = capabilities,
 			on_attach = on_attach,
-		})
-
-		lspconfig["templ"].setup({
-			capabilities = capabilities,
-			on_attach = on_attach,
-			filetypes = { "templ" },
 		})
 
 		lspconfig["lua_ls"].setup({

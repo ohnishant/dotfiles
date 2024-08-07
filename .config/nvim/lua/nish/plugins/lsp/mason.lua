@@ -28,7 +28,7 @@ return {
 				"html",
 				"cssls",
 				"emmet_ls",
-				"eslint",
+				-- "eslint",
 			},
 			automatic_installation = true,
 		})
