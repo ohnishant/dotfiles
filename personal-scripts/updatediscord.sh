@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 # This script updates the Discord app on Linux.
 
+sudo -v
+
 echo "Downloading latest version of discord..."
 curl -L -o /tmp/discord.deb "https://discordapp.com/api/download?platform=linux&format=deb"
 
