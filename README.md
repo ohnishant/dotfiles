@@ -10,6 +10,7 @@ Following are programs needed to experience some core functionalities of this se
 - lm-sensors
 - packer.nvim
 - [Wifi Ramp Icon Font](https://github.com/isaif/polybar-wifi-ramp-icons)
+- [Delta pager for pretty git diffs!](https://github.com/dandavison/delta)
 
 ## Optional Tweaks
 
