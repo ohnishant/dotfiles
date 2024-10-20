@@ -1,20 +1,18 @@
 #!/bin/bash
 
+filename=$(date +%Y-%m-%d_%T).png
+filepath_suffix="/tmp/femboybeauty_"$filename
 
-# file=$1
+echo $filepath_suffix
 
-xdg-open $HOME/Pictures/screenshots/ &
-THUNAR_PID=$!
-
-echo "Enter file path: "
-read file
+xclip -selection clipboard -t image/png -o > $filepath_suffix
 
 filepath_prefix="file=@"
-filepath=$filepath_prefix$file
+full_filepath=$filepath_prefix$filepath_suffix
 
-echo $filepath
+res=$(curl "https://femboy.beauty/api/upload" -F $full_filepath)
+# Print full response for deleteing and other links
+echo "$res" | jq .
 
-curl "https://femboy.beauty/api/upload" -F $filepath | jq .
-
-echo "killing thunar with PID" $THUNAR_PID
-pkill -9 nautilus
+link=$(echo $res | jq -r '.link')
+echo -n $link | xclip -selection clipboard
