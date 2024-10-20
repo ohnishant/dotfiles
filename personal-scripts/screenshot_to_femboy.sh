@@ -10,5 +10,6 @@ else
 	echo "Screeshot successful"
 	# TODO: some logic to check if the image uplaod was successful
 	femboybeauty
+	notify-send "Image URL sent to clipboard successfully"
 	exit 0
 fi
