@@ -1,0 +1,14 @@
+flameshot_res=$(flameshot gui --clipboard 2>&1)
+
+
+len=$(echo ${#flameshot_res})
+
+if [ $len -ne 0 ]; then
+	echo $flameshot_res
+	exit 1
+else
+	echo "Screeshot successful"
+	# TODO: some logic to check if the image uplaod was successful
+	femboybeauty
+	exit 0
+fi
