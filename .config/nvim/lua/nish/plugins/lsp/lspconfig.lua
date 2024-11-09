@@ -70,7 +70,7 @@ return {
 
 		-- |||||||||||||||||||||||||||||||||||||||||| LANGUAGE SERVER CONFIGS! ||||||||||||||||||||||||||||||||||||||||||
 
-		lspconfig["tsserver"].setup({
+		lspconfig["ts_ls"].setup({
 			capabilities = capabilities,
 			on_attach = on_attach,
 		})
@@ -150,7 +150,7 @@ return {
 			capabilities = capabilities,
 			settings = {
 				json = {
-					schemas = require("schemastore").json.schemas,
+					schemas = require("schemastore").json.schemas(),
 					validate = { enable = true },
 				},
 			},

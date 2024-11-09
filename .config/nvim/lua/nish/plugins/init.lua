@@ -7,4 +7,6 @@ return {
 	"tpope/vim-sleuth",
 	"tpope/vim-surround", -- Use bind: `cs(original)(new)` to replace the surrounding symbols | cst(new) for tag
 	"tpope/vim-fugitive",
+	-- jsonls completions
+	"b0o/schemastore.nvim",
 }

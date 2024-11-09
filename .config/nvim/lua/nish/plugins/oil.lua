@@ -91,6 +91,8 @@ return {
 						or vim.startswith(name, "node_modules")
 						or (name == "go.mod")
 						or vim.endswith(name, ".class")
+						or (name == "nob.old")
+						or (name == "nob")
 					)
 				end,
 				-- This function defines what will never be shown, even when `show_hidden` is set
