@@ -22,7 +22,7 @@ exec_always xinput set-prop "ELAN0518:01 04F3:31FC Touchpad" "libinput Natural S
 exec_always xinput --set-prop "USB OPTICAL MOUSE " "Coordinate Transformation Matrix" 1 0 0 0 1 0 0 0 4
 
 # start a terminal
-bindsym $super+Return exec kitty 
+bindsym $super+Return exec wezterm 
 
 # start dmenu (a program launcher)
 bindsym $super+Shift+d exec i3-dmenu-desktop --dmenu="dmenu -i -fn 'Noto Sans:size=11'"
