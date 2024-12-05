@@ -14,6 +14,9 @@ elif [ $WM_DESKTOP != "1883" ]; then
 	if [ $WM_CLASS == 'kitty' ]; then
 
 		echo "%{F#ffffff}Terminal%{u-}"
+	elif [ $WM_CLASS == 'org.wezfurlong.wezterm' ]; then
+
+		echo "%{F#ffffff}Wezterm%{u-}"
 
 	elif [ $WM_CLASS == 'Code' ]; then
 
