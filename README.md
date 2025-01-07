@@ -11,6 +11,7 @@ Following are programs needed to experience some core functionalities of this se
 - packer.nvim
 - [Wifi Ramp Icon Font](https://github.com/isaif/polybar-wifi-ramp-icons)
 - [Delta pager for pretty git diffs!](https://github.com/dandavison/delta)
+- [cbatticon](https://github.com/valr/cbatticon)
 
 ## Optional Tweaks
 

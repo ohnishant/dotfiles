@@ -191,3 +191,6 @@ client.background           #2f343f
 
 
 exec_always nitrogen --restore
+
+# Battery notification 
+exec_always cbatticon --critical-level 20 --low-level 50 --update-interval 5 
